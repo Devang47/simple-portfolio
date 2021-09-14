@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
 function Loading() {
   const loadingBar = useRef(null);
   const loadingScreen = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timeLine = gsap.timeline();
     timeLine.to(loadingBar.current, {
       width: "100%",
