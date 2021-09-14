@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0c0f0a;
+  --primary: #f8f8f8;
+  --secondary: #d1d1d1;
+  --highlight: #41ead4;
+  --card: #ffffff08;
+  --icon-bg: #9e6e6e1a;
+  --icon-bg-hover: #ffffff1c;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary);
+  min-height: 100vh;
+}
+
+.highlighted {
+  color: var(--highlight);
+}
+
+.highlighted_bg {
+  background-color: var(--highlight);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.main_card {
+  background-color: var(--card);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 94%;
+  margin: 90px auto;
+
+  .social_icons {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: var(--icon-bg);
+      transition: 0.1s ease;
+      svg {
+        width: 20px;
+        height: 20px;
+        color: var(--primary);
+      }
+      &:hover {
+        background-color: var(--icon-bg-hover);
+      }
+    }
+  }
+  .container {
+    width: 98%;
+    margin: 0 auto;
+    h1 {
+      font-weight: 600;
+      font-size: 22px;
+      margin: 15px 0 0;
+    }
+    .divider {
+      height: 3px;
+      width: 70px;
+      margin: 8px 0 25px;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      p {
+        font-size: 17px;
+        line-height: 1.6;
+      }
+    }
+    .projects {
+      display: flex;
+      margin-top: 20px;
+      gap: 30px;
+      margin-bottom: 20px;
+      .project {
+        display: block;
+        border-radius: 5px;
+        width: 50%;
+        min-width: 126px;
+        max-width: 156px;
+        height: 100px;
+        a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+      }
+    }
+  }
+}
