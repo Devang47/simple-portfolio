@@ -40,15 +40,18 @@ body {
   padding: 20px;
   border-radius: 5px;
   max-width: 94%;
-  margin: 90px auto;
+  margin: 50px auto 70px;
 
+  display: flex;
+  flex-direction: column-reverse;
   .social_icons {
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    // position: absolute;
+    // right: 20px;
+    // bottom: 20px;
     display: flex;
     align-items: center;
     gap: 15px;
+    // margin-left: 200px;
     a {
       display: flex;
       align-items: center;
@@ -72,25 +75,27 @@ body {
     margin: 0 auto;
     h1 {
       font-weight: 600;
-      font-size: 22px;
+      font-size: 26px;
       margin: 15px 0 0;
     }
     .divider {
       height: 3px;
-      width: 70px;
+      width: 85px;
       margin: 8px 0 25px;
     }
     .description {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
       p {
         font-size: 17px;
         line-height: 1.6;
+        max-width: 430px;
       }
     }
     .projects {
       display: flex;
+      flex-wrap: wrap;
       margin-top: 20px;
       gap: 30px;
       margin-bottom: 20px;
@@ -101,17 +106,29 @@ body {
         min-width: 126px;
         max-width: 156px;
         height: 100px;
-        a{
-            display: block;
+        a {
+          display: block;
+          height: 100%;
+          width: 100%;
+          img {
             height: 100%;
             width: 100%;
-            img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
+            object-fit: cover;
+          }
         }
       }
     }
   }
+}
+
+@media screen and (min-width: 500px) {
+    .main_card {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 690px) {
+    .main_card {
+        width: 70%;
+    }
 }
