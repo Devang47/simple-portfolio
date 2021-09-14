@@ -1,4 +1,4 @@
-# Simple but minimal Portfolio
+# Simple but minimal Portfolio Website
 
 This is a simple portfolio design made using React and GSAP.
 Everyone can use this website and modify them in whichever way they want (no attributions necessary).
