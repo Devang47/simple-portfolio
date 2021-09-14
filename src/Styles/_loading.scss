@@ -1,0 +1,40 @@
+.loading_section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0c0f0a;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+  .logo{
+    img{
+      width: 40px;
+    }
+  }
+  .loading_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 200px;
+    height: 4px;
+    background-color: #f8f8f83a;
+    position: relative;
+    .bar{
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      height: 100%;
+      width: 0%;
+      background-color: #f8f8f8;
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.438);
+    }
+  }
+
+}

@@ -32,13 +32,13 @@
   --secondary: #324766;
   --highlight: #457b9d;
   --card: #a8dadc;
-  --icon-bg: #F1FAEEd3;
-  --icon-bg-hover: #F1FAEE;
+  --icon-bg: #f1faeed3;
+  --icon-bg-hover: #f1faee;
 }
 
 html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--bg) var(--primary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg) var(--primary);
 }
 
 body {
@@ -239,7 +239,6 @@ body {
 }
 
 ::-moz-selection {
-  /* Code for Firefox */
   color: var(--primary);
   background: var(--icon-bg-hover);
 }
@@ -248,3 +247,23 @@ body {
   color: var(--primary);
   background: var(--icon-bg-hover);
 }
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
+}
+
+@page {
+  size: A4 landscape;
+}
+
+@import './loading'

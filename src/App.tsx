@@ -1,9 +1,15 @@
 import React from "react";
 import Content from "./Components/Content";
+import Loading from "./Components/LoadingScreen";
 import "./Styles/style.css";
 
 function App() {
-  return <Content />;
+  return (
+    <>
+      <Loading />
+      <Content />
+    </>
+  );
 }
 
 export default App;
