@@ -24,7 +24,7 @@ function Content() {
       .from(socialIcons.current, {
         translateY: -20,
         opacity: 0,
-        duration: 0.4,
+        duration: 0.5,
       })
       .from(heading.current, {
         translateY: -20,
@@ -58,6 +58,7 @@ function Content() {
           target="_blank"
           rel="noopener noreferrer"
           className="twitter_logo"
+          aria-label="Twitter profile"
         >
           <FaTwitter />
         </a>
@@ -66,6 +67,7 @@ function Content() {
           target="_blank"
           rel="noopener noreferrer"
           className="github_logo"
+          aria-label="Github profile"
         >
           <FaGithub />
         </a>
@@ -103,12 +105,22 @@ function Content() {
         </section>
         <div className="projects">
           <div className="project_1 highlighted_bg project" ref={card1}>
-            <a href="http://#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="http://#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Project1"
+            >
               {/* <img src="#" alt="Project" /> */}
             </a>
           </div>
           <div className="project_2 highlighted_bg project" ref={card2}>
-            <a href="http://#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="http://#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Project2"
+            >
               {/* <img src="#" alt="Project" /> */}
             </a>
           </div>
