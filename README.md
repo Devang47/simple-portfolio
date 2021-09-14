@@ -1,9 +1,26 @@
 # Simple but minimal Portfolio Website
 
-This is a simple portfolio design made using React and GSAP.
-Everyone can use this website and modify them in whichever way they want (no attributions necessary).
+This is a Simple portfolio website I built using React and GSAP.
+Everyone can use this website and modify it in which ever way they want (no attributions necessary).
 
-## Available themes: 
+Check it out live: [here](https://devang47.github.io/simple-portfolio/) (Feedbacks will be appreciated) \
+Github repo: [here](https://github.com/Devang47/simple-portfolio) 
+
+I've also added few default themes but You can also make and add your own theme by making a simple CSS Class like: 
+```CSS
+.unique_theme {
+	--bg: #0c0f0a;
+	--primary: #f8f8f8;
+	--secondary: #d1d1d1;
+	--highlight: #41ead4;
+	--card: #ffffff08;
+	--icon-bg: #9e6e6e1a;
+	--icon-bg-hover: #ffffff1c;
+}
+```
+and then add this Class to ` <body>` tag in `index.html`.
+
+## Available default themes: 
 - Dark theme
 ![Dark theme](https://drive.google.com/uc?id=19KnTSs3TE5Md9dgR_qy5-quKHl2EU1Bq)
 - White theme
@@ -16,8 +33,10 @@ Everyone can use this website and modify them in whichever way they want (no att
 To change themes go to ` index.html ` file and change the class of body tag to the theme name like: 
 ```html 
 <body class="green">
+```
 or 
-<body  class="dark">
+```html
+<body class="dark">
 ```
 
 I know many things in this website can be improved, So **if you wanna contribute just open a pull request.**

@@ -111,6 +111,7 @@ function Content() {
               rel="noopener noreferrer"
               aria-label="Project1"
             >
+              {/* add your project cover image here */}
               {/* <img src="#" alt="Project" /> */}
             </a>
           </div>
@@ -121,6 +122,7 @@ function Content() {
               rel="noopener noreferrer"
               aria-label="Project2"
             >
+              {/* add your project cover image here */}
               {/* <img src="#" alt="Project" /> */}
             </a>
           </div>
