@@ -21,6 +21,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--secondary);
   min-height: 100vh;
+  padding-top: 50px;
 }
 
 .highlighted {
@@ -40,14 +41,11 @@ body {
   padding: 20px;
   border-radius: 5px;
   max-width: 94%;
-  margin: 50px auto 50px;
+  margin: 0 auto 50px;
 
   display: flex;
   flex-direction: column-reverse;
   .social_icons {
-    // position: absolute;
-    // right: 20px;
-    // bottom: 20px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -63,10 +61,14 @@ body {
       svg {
         width: 20px;
         height: 20px;
-        color: var(--primary);
+        color: var(--secondary);
+        transition: 0.1s ease;
       }
       &:hover {
         background-color: var(--icon-bg-hover);
+        svg {
+          color: var(--primary);
+        }
       }
     }
   }
@@ -95,7 +97,7 @@ body {
     }
     .projects {
       display: flex;
-    //   flex-wrap: wrap;
+      //   flex-wrap: wrap;
       margin-top: 20px;
       gap: 30px;
       margin-bottom: 20px;
@@ -123,19 +125,95 @@ body {
 }
 
 @media screen and (min-width: 500px) {
-    .main_card {
-        width: 75%;
-    }
+  .main_card {
+    width: 75%;
+  }
 }
 
 @media screen and (min-width: 690px) {
-    .main_card {
-        max-width: 520px;
+  .main_card {
+    max-width: 520px;
+  }
+  .main_card .container .projects .project {
+    max-width: 180px;
+  }
+  .main_card .container .description p {
+    max-width: 460px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main_card {
+    margin: 0 auto;
+  }
+  #root {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .main_card {
+    flex-direction: column;
+    position: relative;
+    max-width: 600px;
+    .social_icons {
+      position: absolute;
+      top: 30px;
+      right: 20px;
     }
-    .main_card .container .projects .project{
-        max-width: 180px;
+  }
+  .main_card .container .description p {
+    max-width: 650px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main_card {
+    max-width: 800px;
+    padding: 40px 0;
+    .container {
+      width: 600px;
+
+      h1 {
+        margin: 10px 0 0px;
+        font-size: 28px;
+      }
+      .divider {
+        height: 3.5px;
+        margin: 10px 0 25px;
+        width: 105px;
+      }
     }
-    .main_card .container .description p{
-        max-width: 460px;
-    }
+  }
+  .main_card .container .description p {
+    max-width: auto;
+  }
+  .main_card .social_icons a{
+      padding: 7px;
+      svg{
+          width: 19px;
+          height: 19px;
+      }
+  }
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--primary);
+  background: var(--highlight);
+}
+
+::selection {
+  color: var(--primary);
+  background: var(--icon-bg-hover);
 }
