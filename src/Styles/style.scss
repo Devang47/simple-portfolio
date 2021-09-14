@@ -36,6 +36,16 @@
   --icon-bg-hover: #f1faee;
 }
 
+.green {
+  --bg: #adcf96;
+  --primary: #222b1c;
+  --secondary: #2d3b23;
+  --highlight: #007566;
+  --card: #b7d5a3;
+  --icon-bg: #c9e2b7d3;
+  --icon-bg-hover: #c9e2b7;
+}
+
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--bg) var(--primary);
@@ -67,14 +77,18 @@ body {
   border-radius: 5px;
   max-width: 94%;
   margin: 0 auto 50px;
-
   display: flex;
   flex-direction: column-reverse;
+  box-shadow: 0 0.3px 0.5px rgba(0, 0, 0, 0.006),
+    0 0.8px 1.2px rgba(0, 0, 0, 0.009), 0 1.3px 2px rgba(0, 0, 0, 0.011),
+    0 1.9px 3px rgba(0, 0, 0, 0.013), 0 2.8px 4.3px rgba(0, 0, 0, 0.015),
+    0 3.9px 6px rgba(0, 0, 0, 0.017), 0 5.5px 8.5px rgba(0, 0, 0, 0.019),
+    0 8px 12.4px rgba(0, 0, 0, 0.021), 0 12.4px 19.1px rgba(0, 0, 0, 0.024),
+    0 22px 34px rgba(0, 0, 0, 0.03);
   .social_icons {
     display: flex;
     align-items: center;
     gap: 15px;
-    // margin-left: 200px;
     a {
       display: flex;
       align-items: center;
@@ -128,7 +142,6 @@ body {
     }
     .projects {
       display: flex;
-      //   flex-wrap: wrap;
       margin-top: 20px;
       gap: 30px;
       margin-bottom: 20px;
@@ -138,8 +151,17 @@ body {
         width: 50%;
         min-width: 126px;
         max-width: 156px;
-        // height: 100px;
         aspect-ratio: 16/9;
+        transition: 0.3s ease;
+        &:hover {
+          box-shadow: 0 0.3px 0.5px rgba(0, 0, 0, 0.011),
+            0 0.8px 1.2px rgba(0, 0, 0, 0.016), 0 1.3px 2px rgba(0, 0, 0, 0.019),
+            0 1.9px 3px rgba(0, 0, 0, 0.022), 0 2.8px 4.3px rgba(0, 0, 0, 0.025),
+            0 3.9px 6px rgba(0, 0, 0, 0.028), 0 5.5px 8.5px rgba(0, 0, 0, 0.031),
+            0 8px 12.4px rgba(0, 0, 0, 0.034),
+            0 12.4px 19.1px rgba(0, 0, 0, 0.039),
+            0 22px 34px rgba(0, 0, 0, 0.05);
+        }
         a {
           display: block;
           height: 100%;
@@ -266,4 +288,4 @@ body {
   size: A4 landscape;
 }
 
-@import './loading'
+@import "./loading";

@@ -13,7 +13,7 @@ function Content() {
   const card2 = useRef(null);
 
   useEffect(() => {
-    const timeline = gsap.timeline();
+    const timeline = gsap.timeline({ ease: "sine.out" });
     timeline
       .from(fullCard.current, {
         delay: 4,
@@ -21,43 +21,52 @@ function Content() {
         duration: 0.4,
         opacity: 0,
       })
+      .from(socialIcons.current, {
+        translateY: -20,
+        opacity: 0,
+        duration: 0.4,
+      })
       .from(heading.current, {
         translateY: -20,
-        duration: 0.4,
         opacity: 0,
+        duration: 0.4,
       })
       .from(dividerLine.current, {
         width: 0,
-        duration: 0.4,
-        ease: "sine.out",
+        duration: 0.5,
       })
       .from(paragraph.current, {
         opacity: 0,
-        translateY: 20,
+        translateY: 40,
         duration: 0.4,
-        ease: "sine.out",
+        ease: "none",
       })
       .from([card1.current, card2.current], {
         opacity: 0,
-        translateY: 20,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "sine.out",
-      })
-      .from(socialIcons.current, {
-        opacity: 0,
+        translateY: 40,
         duration: 0.4,
-        ease: "sine.out",
+        stagger: 0.1,
+        ease: "none",
       });
   });
 
   return (
     <section className="main_card" ref={fullCard}>
       <div className="social_icons" ref={socialIcons}>
-        <a href="#" className="twitter_logo">
+        <a
+          href="https://twitter.com/DevangSaklani"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="twitter_logo"
+        >
           <FaTwitter />
         </a>
-        <a href="#" className="github_logo">
+        <a
+          href="https://github.com/Devang47"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github_logo"
+        >
           <FaGithub />
         </a>
       </div>
@@ -85,7 +94,7 @@ function Content() {
           </p>
           <p>
             Although i’m currently not looking for job opportunities but my
-            inbox is always open: &nbsp;
+            inbox is always open:&nbsp;
             <a href="mailto:devangsaklani@gmail.com" className="highlighted">
               devangsaklani@gmail.com
             </a>

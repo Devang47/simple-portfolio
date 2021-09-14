@@ -36,6 +36,16 @@
   --icon-bg-hover: #f1faee;
 }
 
+.green {
+  --bg: #adcf96;
+  --primary: #222b1c;
+  --secondary: #2d3b23;
+  --highlight: #007566;
+  --card: #b7d5a3;
+  --icon-bg: #c9e2b7d3;
+  --icon-bg-hover: #c9e2b7;
+}
+
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--bg) var(--primary);
@@ -74,6 +84,8 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  -webkit-box-shadow: 0 0.3px 0.5px rgba(0, 0, 0, 0.006), 0 0.8px 1.2px rgba(0, 0, 0, 0.009), 0 1.3px 2px rgba(0, 0, 0, 0.011), 0 1.9px 3px rgba(0, 0, 0, 0.013), 0 2.8px 4.3px rgba(0, 0, 0, 0.015), 0 3.9px 6px rgba(0, 0, 0, 0.017), 0 5.5px 8.5px rgba(0, 0, 0, 0.019), 0 8px 12.4px rgba(0, 0, 0, 0.021), 0 12.4px 19.1px rgba(0, 0, 0, 0.024), 0 22px 34px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 0.3px 0.5px rgba(0, 0, 0, 0.006), 0 0.8px 1.2px rgba(0, 0, 0, 0.009), 0 1.3px 2px rgba(0, 0, 0, 0.011), 0 1.9px 3px rgba(0, 0, 0, 0.013), 0 2.8px 4.3px rgba(0, 0, 0, 0.015), 0 3.9px 6px rgba(0, 0, 0, 0.017), 0 5.5px 8.5px rgba(0, 0, 0, 0.019), 0 8px 12.4px rgba(0, 0, 0, 0.021), 0 12.4px 19.1px rgba(0, 0, 0, 0.024), 0 22px 34px rgba(0, 0, 0, 0.03);
 }
 
 .main_card .social_icons {
@@ -177,6 +189,13 @@ body {
   min-width: 126px;
   max-width: 156px;
   aspect-ratio: 16/9;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.main_card .container .projects .project:hover {
+  -webkit-box-shadow: 0 0.3px 0.5px rgba(0, 0, 0, 0.011), 0 0.8px 1.2px rgba(0, 0, 0, 0.016), 0 1.3px 2px rgba(0, 0, 0, 0.019), 0 1.9px 3px rgba(0, 0, 0, 0.022), 0 2.8px 4.3px rgba(0, 0, 0, 0.025), 0 3.9px 6px rgba(0, 0, 0, 0.028), 0 5.5px 8.5px rgba(0, 0, 0, 0.031), 0 8px 12.4px rgba(0, 0, 0, 0.034), 0 12.4px 19.1px rgba(0, 0, 0, 0.039), 0 22px 34px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0.3px 0.5px rgba(0, 0, 0, 0.011), 0 0.8px 1.2px rgba(0, 0, 0, 0.016), 0 1.3px 2px rgba(0, 0, 0, 0.019), 0 1.9px 3px rgba(0, 0, 0, 0.022), 0 2.8px 4.3px rgba(0, 0, 0, 0.025), 0 3.9px 6px rgba(0, 0, 0, 0.028), 0 5.5px 8.5px rgba(0, 0, 0, 0.031), 0 8px 12.4px rgba(0, 0, 0, 0.034), 0 12.4px 19.1px rgba(0, 0, 0, 0.039), 0 22px 34px rgba(0, 0, 0, 0.05);
 }
 
 .main_card .container .projects .project a {
@@ -315,7 +334,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #0c0f0a;
+  background-color: var(--bg);
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -335,10 +354,6 @@ body {
   z-index: 10;
 }
 
-.loading_section .logo img {
-  width: 40px;
-}
-
 .loading_section .loading_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -352,8 +367,15 @@ body {
   width: 80%;
   max-width: 200px;
   height: 4px;
-  background-color: #f8f8f83a;
   position: relative;
+}
+
+.loading_section .loading_wrapper::after {
+  content: " ";
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary);
+  opacity: 0.2;
 }
 
 .loading_section .loading_wrapper .bar {
@@ -363,7 +385,7 @@ body {
   opacity: 1;
   height: 100%;
   width: 0%;
-  background-color: #f8f8f8;
+  background-color: var(--primary);
   -webkit-box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.438);
           box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.438);
 }

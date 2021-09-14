@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #0c0f0a;
+  background-color: var(--bg);
   width: 100%;
   height: 100%;
   display: flex;
@@ -11,30 +11,30 @@
   flex-direction: column;
   gap: 20px;
   z-index: 10;
-  .logo{
-    img{
-      width: 40px;
-    }
-  }
-  .loading_wrapper{
+  .loading_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     max-width: 200px;
     height: 4px;
-    background-color: #f8f8f83a;
     position: relative;
-    .bar{
+    &::after {
+      content: " ";
+      position: absolute;
+      inset: 0;
+      background-color: var(--primary);
+      opacity: 0.2;
+    }
+    .bar {
       position: absolute;
       top: 0;
       left: 0;
       opacity: 1;
       height: 100%;
       width: 0%;
-      background-color: #f8f8f8;
+      background-color: var(--primary);
       box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.438);
     }
   }
-
 }
