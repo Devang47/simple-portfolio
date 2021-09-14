@@ -40,7 +40,7 @@ body {
   padding: 20px;
   border-radius: 5px;
   max-width: 94%;
-  margin: 50px auto 70px;
+  margin: 50px auto 50px;
 
   display: flex;
   flex-direction: column-reverse;
@@ -95,7 +95,7 @@ body {
     }
     .projects {
       display: flex;
-      flex-wrap: wrap;
+    //   flex-wrap: wrap;
       margin-top: 20px;
       gap: 30px;
       margin-bottom: 20px;
@@ -105,7 +105,8 @@ body {
         width: 50%;
         min-width: 126px;
         max-width: 156px;
-        height: 100px;
+        // height: 100px;
+        aspect-ratio: 16/9;
         a {
           display: block;
           height: 100%;
@@ -123,12 +124,18 @@ body {
 
 @media screen and (min-width: 500px) {
     .main_card {
-        width: 70%;
+        width: 75%;
     }
 }
 
 @media screen and (min-width: 690px) {
     .main_card {
-        width: 70%;
+        max-width: 520px;
+    }
+    .main_card .container .projects .project{
+        max-width: 180px;
+    }
+    .main_card .container .description p{
+        max-width: 460px;
     }
 }
