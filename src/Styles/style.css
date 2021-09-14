@@ -6,7 +6,7 @@
           box-sizing: border-box;
 }
 
-:root {
+.dark {
   --bg: #0c0f0a;
   --primary: #f8f8f8;
   --secondary: #d1d1d1;
@@ -14,6 +14,31 @@
   --card: #ffffff08;
   --icon-bg: #9e6e6e1a;
   --icon-bg-hover: #ffffff1c;
+}
+
+.blue {
+  --bg: #023047;
+  --primary: #f8f8f8;
+  --secondary: #d1d1d1;
+  --highlight: #ffb703;
+  --card: #ffffff08;
+  --icon-bg: #012030d3;
+  --icon-bg-hover: #012030;
+}
+
+.white {
+  --bg: #f1faee;
+  --primary: #2f4360;
+  --secondary: #324766;
+  --highlight: #457b9d;
+  --card: #a8dadc;
+  --icon-bg: #F1FAEEd3;
+  --icon-bg-hover: #F1FAEE;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg) var(--primary);
 }
 
 body {
@@ -126,6 +151,14 @@ body {
   font-size: 17px;
   line-height: 1.6;
   max-width: 430px;
+}
+
+.main_card .container .description p a {
+  text-decoration: none;
+}
+
+.main_card .container .description p a:hover {
+  text-decoration: underline;
 }
 
 .main_card .container .projects {
@@ -253,7 +286,7 @@ body {
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--primary);
-  background: var(--highlight);
+  background: var(--icon-bg-hover);
 }
 
 ::selection {

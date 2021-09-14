@@ -37,8 +37,8 @@ function Content() {
           </p>
           <p>
             Although i’m currently not looking for job opportunities but my
-            inbox is always open:
-            <span className="highlighted"> devangsaklani@gmail.com</span>
+            inbox is always open: &nbsp;
+             <a href='mailto:devangsaklani@gmail.com' className="highlighted">devangsaklani@gmail.com</a>
           </p>
           <p>These are some of my recent projects:</p>
         </section>
