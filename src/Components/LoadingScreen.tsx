@@ -1,30 +1,13 @@
-import React, { useRef, useEffect } from "react";
-// import { gsap } from "gsap";
+import React, { useRef, useEffect, useState } from "react";
 import anime from "animejs";
 
 function Loading() {
   const loadingBar = useRef(null);
   const loadingScreen = useRef(null);
-
-  const [hidden, setHidden] = React.useState(false);
-
-  // useEffect(() => {
-  //   const timeLine = gsap.timeline();
-  //   timeLine.to(loadingBar.current, {
-  //     width: "100%",
-  //     duration: 3,
-  //     ease: "expo. inOut",
-  //   });
-  //   timeLine.to(loadingBar.current, { opacity: "0", duration: 0.2 });
-  //   timeLine.to(loadingScreen.current, {
-  //     opacity: 0,
-  //     display: "none",
-  //     duration: 0.5,
-  //   });
-  // });
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const tl = anime
+    const timeline = anime
       .timeline({
         easing: "easeOutSine",
       })

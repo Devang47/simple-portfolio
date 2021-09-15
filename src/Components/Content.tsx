@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-// import { gsap } from "gsap";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import anime from "animejs";
@@ -12,44 +11,6 @@ function Content() {
   const socialIcons = useRef(null);
   const card1 = useRef(null);
   const card2 = useRef(null);
-
-  // useEffect(() => {
-  //   const timeline = gsap.timeline({ ease: "sine.out" });
-  //   timeline
-  //     .from(fullCard.current, {
-  //       delay: 4,
-  //       translateY: -50,
-  //       duration: 0.4,
-  //       opacity: 0,
-  //     })
-  //     .from(socialIcons.current, {
-  //       translateY: -20,
-  //       opacity: 0,
-  //       duration: 0.5,
-  //     })
-  //     .from(heading.current, {
-  //       translateY: -20,
-  //       opacity: 0,
-  //       duration: 0.4,
-  //     })
-  //     .from(dividerLine.current, {
-  //       width: 0,
-  //       duration: 0.5,
-  //     })
-  //     .from(paragraph.current, {
-  //       opacity: 0,
-  //       translateY: 40,
-  //       duration: 0.4,
-  //       ease: "none",
-  //     })
-  //     .from(  [card1.current, card2.current], {
-  //       opacity: 0,
-  //       translateY: 40,
-  //       duration: 0.4,
-  //       stagger: 0.1,
-  //       ease: "none",
-  //     });
-  // });
 
   useEffect(() => {
     const timeline = anime
