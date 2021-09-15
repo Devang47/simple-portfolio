@@ -6,6 +6,17 @@ Everyone can use this website and modify it in which ever way they want (no attr
 Check it out live: [here](https://devang47.github.io/simple-portfolio/) (Feedbacks will be appreciated) 
 Github repo: [here](https://github.com/Devang47/simple-portfolio) 
 
+
+
+### **Update**
+Particle JS is also now integrated in a clone of this project 🤩 and it is looking really good: 
+Check it out live here: [here](https://devang47.github.io/simple-portfolio-with-particlejs/)
+Github repo: [here](https://devang47.github.io/simple-portfolio-with-particlejs/)
+![Partile js integrated](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uizx33vysq87h70qwoks.png)
+
+
+
+
 Lighthouse score:
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8g2wd6hb4dl5wo61my87.png)
 
