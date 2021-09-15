@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import anime from "animejs";
 
 function Content() {
   const fullCard = useRef(null);
@@ -12,41 +13,86 @@ function Content() {
   const card1 = useRef(null);
   const card2 = useRef(null);
 
+  // useEffect(() => {
+  //   const timeline = gsap.timeline({ ease: "sine.out" });
+  //   timeline
+  //     .from(fullCard.current, {
+  //       delay: 4,
+  //       translateY: -50,
+  //       duration: 0.4,
+  //       opacity: 0,
+  //     })
+  //     .from(socialIcons.current, {
+  //       translateY: -20,
+  //       opacity: 0,
+  //       duration: 0.5,
+  //     })
+  //     .from(heading.current, {
+  //       translateY: -20,
+  //       opacity: 0,
+  //       duration: 0.4,
+  //     })
+  //     .from(dividerLine.current, {
+  //       width: 0,
+  //       duration: 0.5,
+  //     })
+  //     .from(paragraph.current, {
+  //       opacity: 0,
+  //       translateY: 40,
+  //       duration: 0.4,
+  //       ease: "none",
+  //     })
+  //     .from(  [card1.current, card2.current], {
+  //       opacity: 0,
+  //       translateY: 40,
+  //       duration: 0.4,
+  //       stagger: 0.1,
+  //       ease: "none",
+  //     });
+  // });
+
   useEffect(() => {
-    const timeline = gsap.timeline({ ease: "sine.out" });
-    timeline
-      .from(fullCard.current, {
-        delay: 4,
-        translateY: -50,
-        duration: 0.4,
-        opacity: 0,
+    const timeline = anime
+      .timeline({
+        easing: 'easeInOutSine',
+        duration: 2600,
       })
-      .from(socialIcons.current, {
-        translateY: -20,
-        opacity: 0,
-        duration: 0.5,
+      .add({
+        targets: fullCard.current,
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        delay: 4000,
+        duration: 400,
       })
-      .from(heading.current, {
-        translateY: -20,
-        opacity: 0,
-        duration: 0.4,
+      .add({
+        targets: socialIcons.current,
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        duration: 500,
       })
-      .from(dividerLine.current, {
-        width: 0,
-        duration: 0.5,
+      .add({
+        targets: heading.current,
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        duration: 400,
       })
-      .from(paragraph.current, {
-        opacity: 0,
-        translateY: 40,
-        duration: 0.4,
-        ease: "none",
+      .add({
+        targets: dividerLine.current,
+        width: [0, 85],
+        duration: 500,
+      }, '-=400')
+      .add({
+        targets: paragraph.current,
+        translateY: [40, 0],
+        opacity: [0, 1],
+        duration: 400,
       })
-      .from([card1.current, card2.current], {
-        opacity: 0,
-        translateY: 40,
-        duration: 0.4,
-        stagger: 0.1,
-        ease: "none",
+      .add({
+        targets: [card1.current, card2.current],
+        translateY: [40, 0],
+        opacity: [0, 1],
+        duration: 400,
+        delay: anime.stagger(100)
       });
   });
 
