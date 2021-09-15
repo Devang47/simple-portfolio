@@ -302,6 +302,10 @@ body {
   }
 }
 
+.hide {
+  display: none !important;
+}
+
 ::-moz-selection {
   color: var(--primary);
   background: var(--icon-bg-hover);

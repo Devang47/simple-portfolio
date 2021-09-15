@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import anime from "animejs";
@@ -54,45 +54,46 @@ function Content() {
   useEffect(() => {
     const timeline = anime
       .timeline({
-        easing: 'easeInOutSine',
-        duration: 2600,
+        easing: "easeInOutSine",
       })
       .add({
         targets: fullCard.current,
         translateY: [-50, 0],
         opacity: [0, 1],
-        delay: 4000,
+        delay: 2750,
         duration: 400,
       })
       .add({
         targets: socialIcons.current,
-        translateY: [-20, 0],
         opacity: [0, 1],
-        duration: 500,
+        duration: 600,
       })
       .add({
         targets: heading.current,
         translateY: [-20, 0],
         opacity: [0, 1],
-        duration: 400,
+        duration: 600,
       })
-      .add({
-        targets: dividerLine.current,
-        width: [0, 85],
-        duration: 500,
-      }, '-=400')
+      .add(
+        {
+          targets: dividerLine.current,
+          width: [0, 85],
+          duration: 700,
+        },
+        "-=400"
+      )
       .add({
         targets: paragraph.current,
         translateY: [40, 0],
         opacity: [0, 1],
-        duration: 400,
+        duration: 600,
       })
       .add({
         targets: [card1.current, card2.current],
         translateY: [40, 0],
         opacity: [0, 1],
-        duration: 400,
-        delay: anime.stagger(100)
+        duration: 600,
+        delay: anime.stagger(100),
       });
   });
 
