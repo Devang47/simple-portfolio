@@ -1,8 +1,7 @@
 import React, { Suspense } from "react";
 import "./Styles/style.css";
-const Loading = React.lazy(() => import("./Components/LoadingScreen"));
+import Loading from "./Components/LoadingScreen";
 const Content = React.lazy(() => import("./Components/Content"));
-// import Content from "./Components/Content";
 
 function App() {
   return (

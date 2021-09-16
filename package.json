@@ -2,7 +2,6 @@
   "name": "project-29-simple-portfolio-ts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Devang47.github.io/simple-portfolio/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
