@@ -7,7 +7,7 @@ function Loading() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const timeline = anime
+    anime
       .timeline({
         easing: "easeOutSine",
       })

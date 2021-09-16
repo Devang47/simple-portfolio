@@ -13,7 +13,7 @@ function Content() {
   const card2 = useRef(null);
 
   useEffect(() => {
-    const timeline = anime
+    anime
       .timeline({
         easing: "easeInOutSine",
       })
