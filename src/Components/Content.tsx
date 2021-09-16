@@ -63,7 +63,7 @@ function Content() {
           <FaTwitter />
         </a>
         <a
-          href="https://github.com/Devang47"
+          href="https://github.com/Devang47/simple-portfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="github_logo"
