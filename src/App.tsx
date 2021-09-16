@@ -6,9 +6,9 @@ const Content = React.lazy(() => import("./Components/Content"));
 function App() {
   return (
     <>
+      <Loading />
       <Suspense fallback={<div>Loading...</div>}>
         <Content />
-        <Loading />
       </Suspense>
     </>
   );
