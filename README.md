@@ -10,7 +10,7 @@ Github repo: [here](https://github.com/Devang47/simple-portfolio)
 
 ### **Update**
 Particle JS is also now integrated in a clone of this project 🤩 and it is looking really good: 
-Check it out live here: [here](https://devang47.github.io/simple-portfolio-with-particlejs/)
+Check it out live here: [here](https://simple-portfolio.pages.dev/)
 
 Github repo: [here](https://github.com/Devang47/simple-portfolio-with-particlejs/)
 ![Partile js integrated](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uizx33vysq87h70qwoks.png)
